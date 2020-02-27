@@ -4,7 +4,7 @@ import MemberCard from './Member';
 const TeamMemberList = props => {
    const memberList = props.teamMembers.map(member => {
       return (
-         <MemberCard name={member.name} email={member.email} role={member.role} />
+         <MemberCard key={member.creationDate} name={member.name} email={member.email} role={member.role} />
       );
    });
    return <div className="team-members">{memberList}</div>;
